@@ -1,0 +1,49 @@
+﻿<Window x:Class="Snake2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Snake2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="510" Width="843"
+        KeyUp="Window_KeyUp">
+    <Window.Resources>
+        <SolidColorBrush x:Key="ButtonBorderBrush1" Color="#FF707070"/>
+    </Window.Resources>
+    <Grid Margin="22,33,21,17" MinWidth="800" MinHeight="440" MaxWidth="800" MaxHeight="440">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="223*"/>
+            <RowDefinition Height="217*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="489*"/>
+            <ColumnDefinition Width="276*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="StartGameButton" Content="START GAME" Margin="56,220,56,168" Grid.Column="2" Click="StartGameButton_Click" Background="#FF9BF763" FontFamily="Amatic" FontSize="36" BorderBrush="Black" MinWidth="153" MinHeight="52" MaxWidth="153" MaxHeight="52" Cursor="Hand" Grid.RowSpan="2"/>
+
+        <Button x:Name="CancelButton" Content="CANCEL" Margin="88,163,88,27" Grid.Column="2" Background="#FFF3867B" FontFamily="Amatic" FontSize="20" Click="Button_Click_1" BorderBrush="Black" Cursor="Hand" Height="27" MinWidth="100" MinHeight="27" MaxWidth="100" MaxHeight="27" Grid.Row="1" />
+
+        <ComboBox x:Name="SizeComboBox" Text="SIZE" Margin="76,66,76,121" FontFamily="Amatic" FontSize="22" SelectionChanged="SizeComboBox_SelectionChanged" Grid.Column="2" FontWeight="Bold" Grid.Row="1" Cursor="Arrow">
+
+            <ComboBoxItem>20 X 20</ComboBoxItem>
+            <ComboBoxItem>25 X 25</ComboBoxItem>
+            <ComboBoxItem>40 X 40</ComboBoxItem>
+        </ComboBox>
+        <Canvas Name="GameArea" Margin="10,15,58,15" Grid.RowSpan="2" Grid.Column="1" Width="400" Height="400"/>
+        <ComboBox x:Name="SpeedComboBox" Text="SPEEDE" Grid.Column="2" HorizontalAlignment="Center" Height="30" Margin="0,108,0,0" Grid.Row="1" VerticalAlignment="Top" Width="124" SelectionChanged="SpeedComboBox_SelectionChanged" FontFamily="Amatic" FontSize="22" Cursor="Arrow">
+            <ComboBox.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Color="#FFF0F0F0"/>
+                    <GradientStop Color="#FFE5E5E5" Offset="1"/>
+                </LinearGradientBrush>
+            </ComboBox.Background>
+            <ComboBoxItem>SLOW</ComboBoxItem>
+            <ComboBoxItem>FAST</ComboBoxItem>
+        </ComboBox>
+        <Label x:Name="SnakeGameLabel" Content="SNAKE GAME" Grid.Column="2" HorizontalAlignment="Center" Height="102" VerticalAlignment="Top" Width="216" Background="#FF7DB5DE" BorderThickness="1,1,1,1" BorderBrush="Black" FlowDirection="LeftToRight" FontFamily="Amatic" FontSize="70" Margin="0,20,0,0"/>
+        <Button x:Name="RankingButton" Content="RANKING" Grid.Column="2" HorizontalAlignment="Center" Height="21" Margin="0,141,0,0" VerticalAlignment="Top" Width="100" Cursor="Hand" FontFamily="Amatic" FontSize="16"/>
+
+
+    </Grid>
+</Window>

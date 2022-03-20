@@ -185,6 +185,7 @@ namespace Snake2
                     DropGameArea();
                     DrawGameArea();
                     gameLaw = new GameLaw(20);
+                    gameLaw.SnakeSquareSizePx = SnakeSquareSize;
                     display = new Display(20, SnakeSquareSize, GameArea);
                 }
                 if ((SizeComboBox.SelectedItem as ComboBoxItem).Content as string == "25 X 25")
@@ -194,6 +195,7 @@ namespace Snake2
                     DropGameArea();
                     DrawGameArea();
                     gameLaw = new GameLaw(25);
+                    gameLaw.SnakeSquareSizePx = SnakeSquareSize;
                     display = new Display(25, SnakeSquareSize, GameArea);
                 }
                 if ((SizeComboBox.SelectedItem as ComboBoxItem).Content as string == "40 X 40")
@@ -203,6 +205,7 @@ namespace Snake2
                     DropGameArea();
                     DrawGameArea();
                     gameLaw = new GameLaw(40);
+                    gameLaw.SnakeSquareSizePx = SnakeSquareSize;
                     display = new Display(40, SnakeSquareSize, GameArea);
 
                 }

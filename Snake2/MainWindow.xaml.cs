@@ -63,7 +63,7 @@ namespace Snake2
         public void TickAndRedraw(object sender, EventArgs e)
         {
             gameLaw.GameTick();
-            display.Render(gameLaw.board);
+            display.Render(gameLaw.Board);
             
             
 
